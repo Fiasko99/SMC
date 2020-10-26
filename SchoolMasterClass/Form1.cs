@@ -10,11 +10,29 @@ using System.Windows.Forms;
 
 namespace SchoolMasterClass
 {
-    public partial class Form1 : Form
+    public partial class MenuBarForm : Form
     {
-        public Form1()
+        public MenuBarForm()
         {
             InitializeComponent();
+        }
+
+        private void SelectGame_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+            string game = SelectGame.Text;
+            if (game == "Змейка")
+            {
+
+            }
+            else if(game == "Рисовашки")
+            {
+
+            }
         }
     }
 }
