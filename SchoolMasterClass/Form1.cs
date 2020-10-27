@@ -19,7 +19,7 @@ namespace SchoolMasterClass
 
         private void SelectGame_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            Start.Enabled = true;
         }
 
         private void Start_Click(object sender, EventArgs e)
@@ -27,11 +27,15 @@ namespace SchoolMasterClass
             string game = SelectGame.Text;
             if (game == "Змейка")
             {
-
+                Snake gameForm = new Snake();
+                gameForm.Show();
+                this.Hide();
             }
-            else if(game == "Рисовашки")
+            else if(game == "Рисовашка")
             {
-
+                PaintForm paintForm = new PaintForm();
+                paintForm.Show();
+                this.Hide();
             }
         }
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuBarForm));
             this.SelectGame = new System.Windows.Forms.ComboBox();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.Start = new System.Windows.Forms.Button();
@@ -92,8 +93,10 @@
             this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.SelectGame);
             this.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuBarForm";
             this.Text = "Выбор игр";
+            this.TransparencyKey = System.Drawing.Color.Red;
             this.ResumeLayout(false);
             this.PerformLayout();
 
