@@ -97,6 +97,7 @@
             this.Name = "MenuBarForm";
             this.Text = "Выбор игр";
             this.TransparencyKey = System.Drawing.Color.Red;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuBarForm_FormClosing_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

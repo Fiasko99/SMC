@@ -27,16 +27,24 @@ namespace SchoolMasterClass
             string game = SelectGame.Text;
             if (game == "Змейка")
             {
+                this.Hide();
                 Snake gameForm = new Snake();
                 gameForm.Show();
-                this.Hide();
             }
             else if(game == "Рисовашка")
             {
+                this.Hide();
                 PaintForm paintForm = new PaintForm();
                 paintForm.Show();
-                this.Hide();
             }
+        }
+
+        private void MenuBarForm_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Закрыть?", "Message", MessageBoxButtons.YesNo) == DialogResult.No)
+                e.Cancel = true;
+            else
+                e.Cancel = false;
         }
     }
 }

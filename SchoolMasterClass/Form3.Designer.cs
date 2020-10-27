@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
+            this.BackToMenu = new System.Windows.Forms.Button();
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.pictureBoxBlue = new System.Windows.Forms.PictureBox();
             this.pictureBoxRed = new System.Windows.Forms.PictureBox();
             this.pictureBoxMain = new System.Windows.Forms.PictureBox();
-            this.BackToMenu = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGreen)).BeginInit();
@@ -61,15 +61,26 @@
             this.panel.Controls.Add(this.pictureBoxRed);
             this.panel.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel.Location = new System.Drawing.Point(0, 0);
-            this.panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel.Margin = new System.Windows.Forms.Padding(2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(106, 500);
             this.panel.TabIndex = 0;
             // 
+            // BackToMenu
+            // 
+            this.BackToMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackToMenu.Location = new System.Drawing.Point(9, 465);
+            this.BackToMenu.Name = "BackToMenu";
+            this.BackToMenu.Size = new System.Drawing.Size(92, 23);
+            this.BackToMenu.TabIndex = 6;
+            this.BackToMenu.Text = "Выйти";
+            this.BackToMenu.UseVisualStyleBackColor = true;
+            this.BackToMenu.Click += new System.EventHandler(this.BackToMenu_Click);
+            // 
             // buttonLoad
             // 
             this.buttonLoad.Location = new System.Drawing.Point(9, 294);
-            this.buttonLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLoad.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(92, 19);
             this.buttonLoad.TabIndex = 5;
@@ -89,7 +100,7 @@
             // buttonClear
             // 
             this.buttonClear.Location = new System.Drawing.Point(9, 242);
-            this.buttonClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(92, 19);
             this.buttonClear.TabIndex = 2;
@@ -99,7 +110,7 @@
             // trackBarSize
             // 
             this.trackBarSize.Location = new System.Drawing.Point(9, 192);
-            this.trackBarSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBarSize.Margin = new System.Windows.Forms.Padding(2);
             this.trackBarSize.Minimum = 1;
             this.trackBarSize.Name = "trackBarSize";
             this.trackBarSize.Size = new System.Drawing.Size(92, 45);
@@ -110,7 +121,7 @@
             // 
             this.pictureBoxGreen.BackColor = System.Drawing.Color.Green;
             this.pictureBoxGreen.Location = new System.Drawing.Point(9, 55);
-            this.pictureBoxGreen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxGreen.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxGreen.Name = "pictureBoxGreen";
             this.pictureBoxGreen.Size = new System.Drawing.Size(92, 41);
             this.pictureBoxGreen.TabIndex = 3;
@@ -120,7 +131,7 @@
             // 
             this.pictureBoxYellow.BackColor = System.Drawing.Color.Yellow;
             this.pictureBoxYellow.Location = new System.Drawing.Point(9, 101);
-            this.pictureBoxYellow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxYellow.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxYellow.Name = "pictureBoxYellow";
             this.pictureBoxYellow.Size = new System.Drawing.Size(92, 41);
             this.pictureBoxYellow.TabIndex = 2;
@@ -130,7 +141,7 @@
             // 
             this.pictureBoxBlue.BackColor = System.Drawing.Color.Blue;
             this.pictureBoxBlue.Location = new System.Drawing.Point(9, 146);
-            this.pictureBoxBlue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxBlue.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxBlue.Name = "pictureBoxBlue";
             this.pictureBoxBlue.Size = new System.Drawing.Size(92, 41);
             this.pictureBoxBlue.TabIndex = 1;
@@ -140,7 +151,7 @@
             // 
             this.pictureBoxRed.BackColor = System.Drawing.Color.Red;
             this.pictureBoxRed.Location = new System.Drawing.Point(9, 10);
-            this.pictureBoxRed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxRed.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxRed.Name = "pictureBoxRed";
             this.pictureBoxRed.Size = new System.Drawing.Size(92, 41);
             this.pictureBoxRed.TabIndex = 0;
@@ -151,32 +162,22 @@
             this.pictureBoxMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxMain.Location = new System.Drawing.Point(106, 0);
-            this.pictureBoxMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxMain.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxMain.Name = "pictureBoxMain";
             this.pictureBoxMain.Size = new System.Drawing.Size(701, 500);
             this.pictureBoxMain.TabIndex = 1;
             this.pictureBoxMain.TabStop = false;
-            // 
-            // BackToMenu
-            // 
-            this.BackToMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BackToMenu.Location = new System.Drawing.Point(9, 465);
-            this.BackToMenu.Name = "BackToMenu";
-            this.BackToMenu.Size = new System.Drawing.Size(92, 23);
-            this.BackToMenu.TabIndex = 6;
-            this.BackToMenu.Text = "Выйти";
-            this.BackToMenu.UseVisualStyleBackColor = true;
-            this.BackToMenu.Click += new System.EventHandler(this.BackToMenu_Click);
             // 
             // PaintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 500);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBoxMain);
             this.Controls.Add(this.panel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PaintForm";
             this.Text = "Paint";
             this.panel.ResumeLayout(false);

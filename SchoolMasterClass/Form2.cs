@@ -107,7 +107,14 @@ namespace SchoolMasterClass
                 Random R = new Random();
                 apple.X = R.Next(0, 50) * 10;
                 apple.Y = R.Next(0, 50) * 10;
-                timer1.Interval -= len * 2;
+                if(timer1.Interval - len * 2 > 0)
+                {
+                    timer1.Interval -= len * 2;
+                }
+                else
+                {
+                    timer1.Interval = 1;
+                }
                 count++;
                 countLabel.Text = count.ToString();
             }
@@ -141,9 +148,9 @@ namespace SchoolMasterClass
 
         private void BackToMenu_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MenuBarForm menuForm = new MenuBarForm();
             menuForm.Show();
-            this.Hide();
         }
     }
 }
